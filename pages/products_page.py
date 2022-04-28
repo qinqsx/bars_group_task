@@ -1,5 +1,8 @@
 from .base_page import BasePage
 from .locators import ProductsPageLocators
+from selenium.webdriver.support.ui import Select
+
+"""методы для product_page"""
 
 class ProductsPage(BasePage):
 
@@ -14,3 +17,13 @@ class ProductsPage(BasePage):
 
     def go_to_cart_page_from_product_page(self):
         self.browser.find_element(*ProductsPageLocators.CART_LINK).click()
+
+    def product_price_list_type_float(self):
+        return [float(i[1:]) for i in self.elements_text_list(*ProductsPageLocators.PRODUCTS_PRICE_LINK)]
+
+    def select_product_sort_by_index(self, index):
+        select = Select(self.browser.find_element(*ProductsPageLocators.PRODUCT_SORT_LINK))
+        select.select_by_index(index)
+
+    def comparison_low_to_high(self, manual_sort, after_web_sort):
+        assert sorted(manual_sort) == after_web_sort, "Low to high sort does not work"

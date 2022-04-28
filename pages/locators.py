@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 """Классы с локаторами для страниц и ссылки на них, для улучшения читаемости кода, так же в случае изменения селектора или ссылки на тот или иной объект упрощает корректировку"""
 
 class LoginPageLocators:
@@ -18,6 +19,8 @@ class ProductsPageLocators:
     SAUCE_LABS_BOLT_T_SHIRT_ADD_BUTTON_LINK = (By.CSS_SELECTOR, "#add-to-cart-sauce-labs-bolt-t-shirt")
     SAUCE_LABS_BOLT_T_SHIRT_REMOVE_BUTTON_LINK = (By.CSS_SELECTOR, "#remove-sauce-labs-bolt-t-shirt")
     CART_LINK = (By.CSS_SELECTOR, ".shopping_cart_link")
+    PRODUCTS_PRICE_LINK = (By.CSS_SELECTOR, ".inventory_item_price")
+    PRODUCT_SORT_LINK = (By.TAG_NAME, "select")
 
 class CartPageLocators:
     INVENTORY_ITEM_NAME_LINK = (By.CSS_SELECTOR, ".inventory_item_name")
