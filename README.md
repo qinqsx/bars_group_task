@@ -5,4 +5,4 @@ to use "pip install -r requirements.txt"
 
 to run with complete steps use "pytest -s"
 
-!!! IF TEST DOES NOT RUN !!! try to remove "." in start of import ".pages..."
+!!! IF TEST DOES NOT RUN !!! try to remove "." in start of import ".pages..." in test_main_page.py
