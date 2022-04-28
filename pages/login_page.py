@@ -3,6 +3,7 @@ from .locators import LoginPageLocators
 
 """методы для login_page"""
 
+
 class LoginPage(BasePage):
 
     def log_in_user(self, name, password):

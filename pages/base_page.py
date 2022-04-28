@@ -16,12 +16,9 @@ class BasePage:
         return self.browser.find_element(how, what).text
 
     def elements_text_list(self, how, what):
-        return [i.text for i in self.browser.find_elements(how, what)]            #метод для создания списка текста содержащегося в выбранных элементах
+        # метод для создания списка текста содержащегося в выбранных элементах
+        return [i.text for i in self.browser.find_elements(how, what)]
 
     def send_text(self, how, what, text):
         text_area = self.browser.find_element(how, what)
         text_area.send_keys(text)
-
-
-
-
